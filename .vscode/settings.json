@@ -1,0 +1,9 @@
+{
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "npm.packageManager": "yarn",
+    "sasslint.packageManager": "yarn",
+    "eslint.packageManager": "yarn",
+    "tslint.packageManager": "yarn"
+  }
+  

@@ -1,0 +1,15 @@
+<div *ngIf="form" class="container">
+  <div>
+    <h1>Customer {{form.get('id').value}}</h1>
+  </div>
+  <div>
+    <form [formGroup]="form" (submit)="onSubmit()">
+      <fieldset>
+        <div class="form-group">
+          <label>Name</label>
+          <input formControlName="name" type="text" class="form-control">
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
