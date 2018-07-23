@@ -1,7 +1,7 @@
 # Angular Sample Project
 Welcome to the Angular code test project.
 
-## Resources
+## Resources & Bookmarks
 
 [Angular](https://angular.io)
 [Angular CLI](https://github.com/angular/angular-cli/wiki/generate)
@@ -36,15 +36,18 @@ Change directories to this new project:
 Install project dependencies:
 `yarn install`
 
-Run from commandline
+Run from commandline (hit CTRL-C to stop)
+
 `yarn start`
 
 OR run from VS Code
+
 `code .`
 
-Click Tasks then Run
+From the menu at the top of VS Code, click Tasks, then Run
 
 ## Angular-CLI Basics
 
 #### How to create a new component
-ng g component component-name
+
+`ng g component component-name`
