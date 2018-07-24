@@ -10,7 +10,7 @@
             <span class="redText">*</span>
           </label>
           <input formControlName="name" type="text" class="form-control" required>
-          <div *ngIf="!form.controls['name'].valid && form.controls['name'].touched">Name is required.</div>
+          <div class="redText" *ngIf="!form.controls['name'].valid && form.controls['name'].touched">Name is required.</div>
           <br>
           <table style="width: 100%">
             <tr class="tr">
@@ -19,7 +19,7 @@
                   <span class="redText">*</span>
                 </label>
                 <input formControlName="street" type="text" class="form-control" required>
-                <div *ngIf="!form.controls['street'].valid && form.controls['street'].touched">Street is required.</div>
+                <div  class="redText" *ngIf="!form.controls['street'].valid && form.controls['street'].touched">Street is required.</div>
               </td>
             </tr>
             <tr class="tr">
@@ -28,21 +28,21 @@
                   <span class="redText">*</span>
                 </label>
                 <input formControlName="city" type="text" class="form-control" required>
-                <div *ngIf="!form.controls['city'].valid && form.controls['city'].touched">City is required.</div>
+                <div  class="redText" *ngIf="!form.controls['city'].valid && form.controls['city'].touched">City is required.</div>
               </td>
               <td>
                 <label>State
                   <span class="redText">*</span>
                 </label>
                 <input formControlName="state" type="text" class="form-control" required>
-                <div *ngIf="!form.controls['state'].valid && form.controls['state'].touched">State is required.</div>
+                <div  class="redText" *ngIf="!form.controls['state'].valid && form.controls['state'].touched">State must be 2 characters.</div>
               </td>
               <td>
                 <label>Zip code
                   <span class="redText">*</span>
                 </label>
                 <input formControlName="zipCode" type="number" class="form-control" required>
-                <div *ngIf="!form.controls['zipCode'].valid && form.controls['zipCode'].touched">Zip code is required.</div>
+                <div  class="redText" *ngIf="!form.controls['zipCode'].valid && form.controls['zipCode'].touched">Zip code is required.</div>
               </td>
             </tr>
           </table>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '../../../node_modules/@angular/router';
 import { FormBuilder, FormGroup, FormControl, Validators } from '../../../node_modules/@angular/forms';
+import {states} from '../../assets/common'
 
 // Project imports
 import { Customer } from '../customer.model';
@@ -15,7 +16,9 @@ export class EditCustomerComponent implements OnInit {
   // Forms
   public form: FormGroup;
 
-  constructor(private activatedRoute: ActivatedRoute, private customerService: CustomerService, private fb: FormBuilder) { }
+  states = states;
+
+  constructor(private activatedRoute: ActivatedRoute, private customerService: CustomerService, private fb: FormBuilder) {}
 
 
   ngOnInit() {
@@ -26,10 +29,10 @@ export class EditCustomerComponent implements OnInit {
     this.form = this.fb.group({
       id: new FormControl(customer.id, Validators.required),
       name: new FormControl(customer.name, Validators.required),
-      city: new FormControl(customer.city),
-      state: new FormControl(customer.state),
-      street: new FormControl(customer.street),
-      zipCode: new FormControl(customer.zipCode),
+      city: new FormControl(customer.city, Validators.required),
+      state: new FormControl(customer.state, Validators.compose([Validators.minLength(2), Validators.maxLength(2), Validators.required])),
+      street: new FormControl(customer.street, Validators.required),
+      zipCode: new FormControl(customer.zipCode, Validators.required),
     });
 
     }));
