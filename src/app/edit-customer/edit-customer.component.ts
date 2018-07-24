@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '../../../node_modules/@angular/router';
-import { FormBuilder, FormGroup, FormControl } from '../../../node_modules/@angular/forms';
+import { FormBuilder, FormGroup, FormControl, Validators } from '../../../node_modules/@angular/forms';
 
 // Project imports
 import { Customer } from '../customer.model';
@@ -24,8 +24,8 @@ export class EditCustomerComponent implements OnInit {
       const customer = this.customerService.get(id);
     // Build Form
     this.form = this.fb.group({
-      id: new FormControl(customer.id),
-      name: new FormControl(customer.name),
+      id: new FormControl(customer.id, Validators.required),
+      name: new FormControl(customer.name, Validators.required),
       city: new FormControl(customer.city),
       state: new FormControl(customer.state),
       street: new FormControl(customer.street),
