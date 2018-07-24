@@ -14,5 +14,4 @@ export class CustomersComponent implements OnInit {
   ngOnInit() {
     this.customers = this.customerService.getAll();
   }
-
 }
