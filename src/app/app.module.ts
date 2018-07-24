@@ -7,12 +7,14 @@ import { AppRoutes } from './app.routes';
 import { HomeComponent } from './home/home.component';
 import { EditCustomerComponent } from './edit-customer/edit-customer.component';
 import { CustomerService } from './customer.service';
+import { CustomersComponent } from './customers/customers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    EditCustomerComponent
+    EditCustomerComponent,
+    CustomersComponent
   ],
   imports: [
     AppRoutes,
