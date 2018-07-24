@@ -17,6 +17,7 @@ export class EditCustomerComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute, private customerService: CustomerService, private fb: FormBuilder) { }
 
+
   ngOnInit() {
     this.activatedRoute.queryParamMap.subscribe(((params) => {
       const id: number = Number.parseInt(this.activatedRoute.snapshot.paramMap.get('id'));
@@ -35,7 +36,7 @@ export class EditCustomerComponent implements OnInit {
   }
 
   onSubmit(): void {
-    // TODO: code
+    console.log('Save button clicked!')
   }
 
 }
